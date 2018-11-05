@@ -8,6 +8,17 @@ class Solution(object):
         :rtype: bool
         """
 
+        """
+        s = "abcdef"
+        p = "a*d?f"
+        [[1, 0, 0, 0, 0, 0, 0],
+         [0, 1, 0, 0, 0, 0, 0],
+         [0, 1, 1, 1, 1, 1, 1],
+         [0, 0, 0, 0, 1, 0, 0],
+         [0, 0, 0, 0, 0, 1, 0],
+         [0, 0, 0, 0, 0, 0, 1]]
+
+        """
         table = [[False] * (len(s) + 1)  for _ in range(len(p) + 1)]
         table[0][0] = True
 
@@ -20,5 +31,5 @@ class Solution(object):
                     table[i][j] = ( p[i - 1] == s[j - 1] or p[i - 1] == '?') and table[i - 1][j - 1]
                 else:
                     table[i][j] = table[i][j - 1] or table[i - 1][j]
-                    
+
         return table[-1][-1]
