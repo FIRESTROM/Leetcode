@@ -49,3 +49,15 @@ Deque -> A efficient data structure: use O(1) time complexity to pop & append el
                Syntax: deque_name.remove(i)
       -- 4 --  # number of data appear in the deque
                Syntax: deque_name.count(data)
+
+Interval ->  from interval import interval, inf, imath
+
+      Add & Sub   ---   interval[a, b] +/- interval[c, d] = interval[a +/- b, c +/- d]
+      Intersect   ---   interval[a, b] & interval[c, d]
+      Merge       ---   interval[a, b] | interval[c, d]
+      Get element ---   interval.start ; interval.end
+
+Sort:
+
+      Python -> sort.list()
+                sorted(data, key = lambda x : x[0])
