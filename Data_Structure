@@ -1,0 +1,51 @@
+Data Structure
+
+
+
+
+Queue -> A data structure FIFO
+
+      // Initialize queue
+      Syntax: queue_name = queue.Queue(maxsize)
+
+      // Insert Element
+      Syntax: queue_name.put(data)
+
+      // Get And remove the element
+      Syntax: queue_name.get()
+
+      // Get # elements in the Queue
+      Syntax: queue_name.qsize()
+
+      // Check the queue is full or empty
+      Syntax: queue_name.full()
+      Syntax: queue_name.empty()
+
+Stack -> A LIFO queue (same as the data structure Stack)
+
+      // Initialize stack
+      Syntax: stack_name = queue.LifoQueue(maxsize)
+
+      All Other functions are the same as the queue, instead of this is LIFO.
+
+Deque -> A efficient data structure: use O(1) time complexity to pop & append elements.
+      -> Also able to add/pop elements from the leftmost / rightmost in the queue.
+
+      // initializing deque
+      Syntax: deque_name = Queue.deque( list )
+
+      // Append and pop from left or right
+      Syntax: deque_name.append(data)     -- append to rightmost place
+              deque_name.appendleft(data) -- append to leftmost place
+              deque_name.pop(data)        -- pop the rightmost data
+              deque_name.popleft(data)    -- pop the leftmost data
+
+      // Other useful functions
+      -- 1 --  Search data from start index to end index, return the index that first appear
+               Syntax: deque_name.index(data, start, end)
+      -- 2 --  Insert data to index i
+               Syntax: deque_name.Insert(i, data)
+      -- 3 --  Remove data at index i
+               Syntax: deque_name.remove(i)
+      -- 4 --  # number of data appear in the deque
+               Syntax: deque_name.count(data)
