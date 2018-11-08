@@ -32,3 +32,28 @@ class Solution(object):
             if self.search(right, target) != -1:
                 return index_right + self.search(right, target)
             return -1
+
+
+### Another binary search solution
+
+class Solution(object):
+
+    def binary(self, nums, target, start, end):
+        if start == end:
+            if target == nums[start]:
+                return start
+            return -1
+        mid = (start + end) / 2
+        if nums[start] <= target <= nums[mid]:
+            return self.binary(nums, target, start, mid)
+        elif nums[mid + 1] <= target <= nums[end]:
+            return self.binary(nums, target, mid + 1, end)
+        elif nums[start] > nums[mid]:
+            return self.binary(nums, target, start, mid)
+        else:
+            return self.binary(nums, target, mid + 1, end)
+
+    def search(self, nums, target):
+        if len(nums) == 0:
+            return -1
+        return self.binary(nums, target, 0, len(nums) - 1)
