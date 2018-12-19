@@ -41,6 +41,12 @@ class Solution(object):
 #         self.val = x
 #         self.next = None
 
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
 class Solution(object):
     def addTwoNumbers(self, l1, l2):
         """
@@ -61,7 +67,7 @@ class Solution(object):
             cur = cur.next
             l1, l2 = l1.next, l2.next
 
-        if not l1 is not None:
+        if l1 is not None:
             while l1 is not None:
                 sum = l1.val + carry
                 carry = 1 if sum >= 10 else 0
@@ -80,6 +86,7 @@ class Solution(object):
 
         if carry == 1:
             cur.next = ListNode(1)
+
 
 
         return result.next
