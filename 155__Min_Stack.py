@@ -22,7 +22,7 @@ class MinStack(object):
         :rtype: void
         """
         t = self.stack.pop()
-        if self.min_stack[ -1] == t:
+        if self.min_stack[-1] == t:
             self.min_stack.pop()
 
 
