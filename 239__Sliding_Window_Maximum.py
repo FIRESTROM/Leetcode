@@ -9,13 +9,14 @@ class Solution(object):
             return [max(nums)]
         if len(nums) == 0:
             return []
+
         temp_max = nums[0]
         valid = 0
         for i in range(k):
             if nums[i] > temp_max:
                 temp_max = nums[i]
                 valid = i
-        print(valid)
+
         result = [temp_max]
         for i in range(1, len(nums) - k + 1):
             if valid == 0:
