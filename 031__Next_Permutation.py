@@ -9,7 +9,7 @@ class Solution(object):
             i -= 1
         if i >= 0:
             j = len(nums) - 1
-            while j >= 0 and nums[j] <= nums[i]:
+            while j >= i and nums[j] <= nums[i]:
                 j -= 1
             nums[i], nums[j] = nums[j], nums[i]
 
@@ -23,4 +23,3 @@ class Solution(object):
             nums[i], nums[j] = nums[j], nums[i]
             i += 1
             j -= 1
-    
