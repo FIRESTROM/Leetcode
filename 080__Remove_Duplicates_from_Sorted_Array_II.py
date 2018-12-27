@@ -20,3 +20,21 @@ class Solution(object):
                 nums[length] = nums[i]
                 length += 1
         return length
+
+# Another Solution
+
+class Solution(object):
+    def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        i, result = 0, len(nums)
+        while i < result:
+            if i < result - 2 and nums[i] == nums[i + 1] == nums[i + 2]:
+                nums.pop(i)
+                result -= 1
+            else:
+                i += 1
+
+        return result
