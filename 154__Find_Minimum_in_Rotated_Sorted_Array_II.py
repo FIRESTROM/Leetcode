@@ -17,10 +17,10 @@ class Solution(object):
             while left < right and nums[left] == nums[left + 1]:
                 left += 1
 
-            mid = left + (right - left) / 2
+            if left == right:
+                return nums[left]
 
-            if mid == right:
-                return nums[mid]
+            mid = left + (right - left) / 2
 
             if nums[mid] > nums[mid + 1]:
                 return nums[mid + 1]
