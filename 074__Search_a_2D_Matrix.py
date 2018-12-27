@@ -11,8 +11,8 @@ class Solution(object):
         m, n = len(matrix), len(matrix[0])
         start, end = 0, m * n - 1
         while start <= end:
-            mid = (start + end) // 2
-            i, j = mid // n, mid % n
+            mid = (start + end) / 2
+            i, j = mid / n, mid % n
             if matrix[i][j] == target:
                 return True
             elif matrix[i][j] > target:
