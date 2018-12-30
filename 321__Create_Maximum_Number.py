@@ -26,29 +26,28 @@ class Solution(object):
         return queue
 
     def merge(self, sort1, sort2):
-        i = 0
-        j = 0
-        ans = []
+        i, j = 0, 0
+        result = []
         while i < len(sort1) and j < len(sort2):
             if self.larger(sort1[i:], sort2[j:]):
-                ans.append(sort1[i])
+                result.append(sort1[i])
                 i += 1
             else:
-                ans.append(sort2[j])
+                result.append(sort2[j])
                 j += 1
         if i == len(sort1):
-            ans += sort2[j:]
+            result += sort2[j:]
         else:
-            ans += sort1[i:]
-        return ans
+            result += sort1[i:]
+        return result
 
-    def larger(self, merged, ans):
-        for i in range(0, min(len(merged), len(ans))):
-            if merged[i] < ans[i]:
+    def larger(self, list1, list2):
+        for i in range(0, min(len(list1), len(list2))):
+            if list1[i] < list2[i]:
                 return False
-            elif merged[i] > ans[i]:
+            elif list1[i] > list2[i]:
                 return True
-        if len(merged) < len(ans):
+        if len(list1) < len(list2):
             return False
         else:
             return True
