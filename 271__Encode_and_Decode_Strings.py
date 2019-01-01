@@ -42,8 +42,8 @@ class Codec:
             start_ind = int(inds[i])
             if i == len(inds) - 1:
                 end_ind = len(estr)
-            else: end_ind = int(inds[i+1])
-            t = estr[start_ind:end_ind]
+            else: end_ind = int(inds[i + 1])
+            t = estr[start_ind : end_ind]
             dstr.append(t)
         return dstr
 
