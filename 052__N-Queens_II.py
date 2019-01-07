@@ -13,17 +13,18 @@ class Solution(object):
 
         return self.result
 
-    def search(self, r):
-        if r == self.n:
+    # We will go row by row, for each row, try putting a queen on each column
+    def search(self, row, path):
+        if row == self.n:
             self.result += 1
             return
 
-        for c in range(self.n):
-            if c not in self.col_taken and c - r not in self.diag_taken and c + r not in self.antiDiag_taken:
-                self.col_taken.add(c)
-                self.diag_taken.add(c - r)
-                self.antiDiag_taken.add(c + r)
-                self.search(r + 1)
-                self.col_taken.remove(c)
-                self.diag_taken.remove(c - r)
-                self.antiDiag_taken.remove(c + r)
+        for col in range(self.n):
+            if col not in self.col_taken and col - row not in self.diag_taken and col + row not in self.antiDiag_taken:
+                self.col_taken.add(col)
+                self.diag_taken.add(col - row)
+                self.antiDiag_taken.add(col + row)
+                self.search(row + 1)
+                self.col_taken.remove(col)
+                self.diag_taken.remove(col - row)
+                self.antiDiag_taken.remove(col + row)
