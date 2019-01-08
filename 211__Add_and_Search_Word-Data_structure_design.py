@@ -61,3 +61,44 @@ class WordDictionary(object):
 # obj = WordDictionary()
 # obj.addWord(word)
 # param_2 = obj.search(word)
+
+
+# Another Faster Solution Using Dictionary
+
+
+class WordDictionary(object):
+
+    def __init__(self):
+        """
+        Initialize your data structure here.
+        """
+        self.len2words = collections.defaultdict(list)
+
+
+    def addWord(self, word):
+        """
+        Adds a word into the data structure.
+        :type word: str
+        :rtype: void
+        """
+        self.len2words[len(word)].append(word)
+
+
+    def search(self, word):
+        """
+        Returns if the word is in the data structure. A word could contain the dot character '.' to represent any one letter.
+        :type word: str
+        :rtype: bool
+        """
+        words = self.len2words[len(word)]
+        for i, char in enumerate(word):
+            words = [w for w in words if char in (".", w[i])]
+            if not words:
+                return False
+        return True
+
+
+# Your WordDictionary object will be instantiated and called as such:
+# obj = WordDictionary()
+# obj.addWord(word)
+# param_2 = obj.search(word)
