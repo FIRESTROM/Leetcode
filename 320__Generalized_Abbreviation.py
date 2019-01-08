@@ -4,20 +4,22 @@ class Solution(object):
         :type word: str
         :rtype: List[str]
         """
-        result = []
-        self.helper(word, "", 0, 0, result)
-        return result
+        self.result = []
+        self.helper(word, "", 0, 0)
+        return self.result
 
-    def helper(self, word, changed_word, start, count, results):
+    def helper(self, word, changed_word, start, count):
         if start == len(word):
             if count > 0:
                 changed_word += str(count)
-            results.append(changed_word)
+            self.result.append(changed_word)
             return
-        self.helper(word, changed_word, start + 1, count + 1, results)
+        # Abbreviate this char at start
+        self.helper(word, changed_word, start + 1, count + 1)
+        # Not Abbreviate this char at start
         if count > 0:
             changed_word += str(count)
-        self.helper(word, changed_word + word[start], start + 1, 0, results) 
+        self.helper(word, changed_word + word[start], start + 1, 0)
 
 
 # Recursion with DP Solution
