@@ -27,6 +27,12 @@ class Solution:
         curr, temp = prev.next, None
         for _ in range(n - m + 1):
             curr.next, curr, temp = temp, curr.next, curr
+            # Or more clear:
+            # temp = curr.next
+            # curr.next = node
+            # node = curr
+            # curr = temp
+
 
         # now the situation is
         # [dummy .... prev]    [temp,..., prev.next]   [curr .....]
