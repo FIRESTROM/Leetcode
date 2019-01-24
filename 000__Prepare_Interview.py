@@ -4,6 +4,8 @@ Linked List         : 完成到379
 Stack & Queue       : 完成到394
 Tree & BFS & DFS    : 完成到250
 Graph & Topological Sort & Trie & BIT(Indexed) & Segment Tree & BST(Search): 完成到332
+Recursion & DP      : 完成到392
+Sort & Searching    : 完成到392
 
 
 # Data Structure:
