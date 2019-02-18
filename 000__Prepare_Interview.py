@@ -18,7 +18,8 @@ from collections import deque
 # Index
 lst.index(val) -> index of val in the lst
 
-
+# Random
+random.randint(a, b) -> A random int value from a to b (Both inclusive)
 
 # Linked List
 
