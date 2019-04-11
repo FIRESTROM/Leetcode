@@ -15,6 +15,11 @@ from collections import deque
     left_most = lst.popleft()
     right_most = lst.pop()
 
+from collections import heapq
+    heap = []
+    heapq.heappush(heap, (key, stuff)) # Push the (key, stuff) pair sorted by key
+    heapq.heappop(heap) # return the (key, stuff) pair with smallest
+
 # Index
 lst.index(val) -> index of val in the lst
 
