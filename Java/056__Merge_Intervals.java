@@ -35,8 +35,8 @@ class Solution {
 class Solution {
     public List<Interval> merge(List<Interval> intervals) {
 
-        Collections.sort(intervals,new Comparator<Interval>() {
-            public int compare(Interval a,Interval b){return (a.start - b.start);}
+        Collections.sort(intervals, new Comparator<Interval>() {
+            public int compare(Interval a,Interval b) {return (a.start - b.start);}
         });
         Stack<Interval> result = new Stack<Interval>();
         if (intervals.size() == 0) {
