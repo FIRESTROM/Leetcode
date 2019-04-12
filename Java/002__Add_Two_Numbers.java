@@ -27,3 +27,31 @@ class Solution {
         return result.next;
     }
 }
+
+
+
+// Another really smart solution.
+class Solution {
+    public int trap(int[] height) {
+        int[] water = new int[height.length];
+
+        int max_height = 0;
+        for (int i = 0; i < height.length; i++) {
+            if (height[i] > max_height)
+                max_height = height[i];
+            water[i] = max_height - height[i];
+        }
+
+        max_height = 0;
+        for (int i = height.length - 1; i >= 0; i--) {
+            if (height[i] > max_height)
+                max_height = height[i];
+            water[i] = Math.min(water[i], max_height - height[i]);
+        }
+
+        int result = 0;
+        for (int i = 0; i < water.length; i++)
+            result += water[i];
+        return result;
+    }
+}
