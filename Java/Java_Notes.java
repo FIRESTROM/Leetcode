@@ -19,5 +19,12 @@ Set<Integer> temp = new HashSet<>();
 temp.add(1);
 result.removeAll(temp); // remove every element in temp from result
 
+// Build struct
+enum Index {
+    GOOD, BAD, UNKNOWN
+}
+Index[] memo = new Index[100];
+
+
 // Specific helper functions
 System.arraycopy(Object source_array, int source_start,Object dest_array, int dest_start, int len);
