@@ -25,6 +25,17 @@ enum Index {
 }
 Index[] memo = new Index[100];
 
+    // In functions
+    class Range {
+              int start;
+              int end;
+              int count;
+          }
+    HashMap<Integer, Range> map = new HashMap<>();
+
+    for (Map.Entry<Integer, Range> e : map.entrySet()) {
+        Range r = e.getValue();
+    }
 
 // Specific helper functions
 System.arraycopy(Object source_array, int source_start,Object dest_array, int dest_start, int len);
