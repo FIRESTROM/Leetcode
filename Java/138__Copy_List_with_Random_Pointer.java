@@ -16,6 +16,7 @@ class Node {
 */
 class Solution {
     HashMap<Node, Node> node_map = new HashMap<>();
+    
     public Node copyRandomList(Node head) {
         if (head == null) {
             return null;
@@ -27,7 +28,7 @@ class Solution {
         node_map.put(head, result);
         result.next = this.copyRandomList(head.next);
         result.random = this.copyRandomList(head.random);
-        
+
         return result;
     }
 }
