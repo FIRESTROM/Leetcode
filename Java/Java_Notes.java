@@ -5,6 +5,12 @@
 String str = "abcd";
 char[] str_to_array = str.toCharArray();
 String back_to_str = String.valueOf(str_to_array);
+  // String builder
+  StringBuilder sb = new StringBuilder("");
+  sb.append('#');
+  sb.append(count[i]);
+  String key = sb.toString();
+
 
 // Why this need to set to ArrayList
 List<List<Integer>> result = new ArrayList<>();
