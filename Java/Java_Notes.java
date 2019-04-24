@@ -16,6 +16,7 @@ String back_to_str = String.valueOf(str_to_array);
 List<List<Integer>> result = new ArrayList<>();
 List<Integer> cur_list;
 result.add(new ArrayList<>(cur_list));
+result.add(Arrays.asList(1, 2, 3));
 
 // Set
 Set<Integer> result = new HashSet<>();
@@ -24,6 +25,23 @@ result.add(2);
 Set<Integer> temp = new HashSet<>();
 temp.add(1);
 result.removeAll(temp); // remove every element in temp from result
+
+// PriorityQueue
+PriorityQueue<Integer> queue = new PriorityQueue<Integer> ((n1, n2) -> map.get(n1) - map.get(n2));
+    Comparator<String> stringLengthComparator = new Comparator<String>() {
+          @Override
+          public int compare(String s1, String s2) {
+              return s1.length() - s2.length();
+          }
+      };
+    // The above Comparator can also be created using lambda expression like this:
+    Comparator<String> stringLengthComparator = (s1, s2) -> {
+          return s1.length() - s2.length();
+    };
+queue.add(val1);
+queue.add(val2); --- > will rank from small to large
+queue.remove() VS queue.poll() --- > Only different when queue is empty : remove() throws NoSuchElementException; poll() returns null
+
 
 // Build struct
 enum Index {
