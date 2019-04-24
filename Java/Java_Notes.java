@@ -5,6 +5,7 @@
 String str = "abcd";
 char[] str_to_array = str.toCharArray();
 String back_to_str = String.valueOf(str_to_array);
+s1.compareTo(s2) --> s1 - s2
   // String builder
   StringBuilder sb = new StringBuilder("");
   sb.append('#');
