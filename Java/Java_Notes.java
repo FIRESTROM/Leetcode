@@ -17,6 +17,8 @@ List<List<Integer>> result = new ArrayList<>();
 List<Integer> cur_list;
 result.add(new ArrayList<>(cur_list));
 result.add(Arrays.asList(1, 2, 3));
+result.addAll(cur_list);
+
 
 // Set
 Set<Integer> result = new HashSet<>();
