@@ -30,7 +30,10 @@ result.add(2);
 Set<Integer> temp = new HashSet<>();
 temp.add(1);
 result.removeAll(temp); // remove every element in temp from result
-
+// Normal Queue
+Queue<TreeNode> queue = new LinkedList<>();
+queue.add(new TreeNode(x));
+queue.poll();
 // PriorityQueue
 PriorityQueue<Integer> queue = new PriorityQueue<Integer> ((n1, n2) -> map.get(n1) - map.get(n2));
     Comparator<String> stringLengthComparator = new Comparator<String>() {
@@ -55,7 +58,7 @@ tree.firstKey();  // Return the first (lowest) key currently in this sorted map.
 tree.lastKey();  // Return the last (highest) key currently in this sorted map.
 tree.floorEntry(val);  // Return the entry with greatest key less than or equal to the given key
 tree.floorKey(val); // Return the greatest key less than or equal to the given key
-
+SortedSet<String> keys = new TreeSet<>(map.keySet());
 
 // Build struct
 enum Index {
