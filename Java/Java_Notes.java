@@ -45,6 +45,15 @@ queue.add(val1);
 queue.add(val2); --- > will rank from small to large
 queue.remove() VS queue.poll() --- > Only different when queue is empty : remove() throws NoSuchElementException; poll() returns null
 
+// Map
+  // log(n) for containsKey, get, put and remove operation
+TreeMap<Integer, String> tree = new TreeMap<>();
+tree.put(int_val, string);
+tree.firstKey();  // Return the first (lowest) key currently in this sorted map.
+tree.lastKey();  // Return the last (highest) key currently in this sorted map.
+tree.floorEntry(val);  // Return the entry with greatest key less than or equal to the given key
+tree.floorKey(val); // Return the greatest key less than or equal to the given key
+
 
 // Build struct
 enum Index {
