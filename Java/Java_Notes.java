@@ -3,8 +3,10 @@
 
 // String <--> char array
 String str = "abcd";
+str.replace("a", "hhh") = "hhhbcd";
 char[] str_to_array = str.toCharArray();
 String back_to_str = String.valueOf(str_to_array);
+int value = Integer.parseInt(int_val);
 s1.compareTo(s2) --> s1 - s2
   // String builder
   StringBuilder sb = new StringBuilder("");
@@ -75,3 +77,7 @@ Index[] memo = new Index[100];
 
 // Specific helper functions
 System.arraycopy(Object source_array, int source_start,Object dest_array, int dest_start, int len);
+String temp = "abcde";
+temp.hashCode(); // Return a hash code (int value)
+Random r = new Random();
+int key = r.nextInt(Integer.MAX_VALUE); // Generate a int key value, upper bound is Integer.MAX_VALUE
