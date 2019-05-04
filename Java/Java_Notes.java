@@ -5,6 +5,7 @@
 String str = "abcd";
 str.replace("a", "hhh") = "hhhbcd";
 char[] str_to_array = str.toCharArray();
+String new_str = str.toLowerCase();
 String back_to_str = String.valueOf(str_to_array);
 int value = Integer.parseInt(int_val);
 s1.compareTo(s2) --> s1 - s2
