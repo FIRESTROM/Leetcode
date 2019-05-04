@@ -15,15 +15,12 @@ class Solution {
             for (int j = 0; j < 9; j++) {
                 char num = board[i][j];
                 if (num != '.') {
-                    int n = (int)num;
-                    int box_index = (i / 3 ) * 3 + j / 3;
-
-                    // keep the current cell value
+                    int n = (int) num;
+                    int box_index = (i / 3) * 3 + j / 3;
                     rows[i].put(n, rows[i].getOrDefault(n, 0) + 1);
                     columns[j].put(n, columns[j].getOrDefault(n, 0) + 1);
                     boxes[box_index].put(n, boxes[box_index].getOrDefault(n, 0) + 1);
 
-                    // check if this value has been already seen before
                     if (rows[i].get(n) > 1 || columns[j].get(n) > 1 || boxes[box_index].get(n) > 1)
                         return false;
                 }
