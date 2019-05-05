@@ -42,3 +42,39 @@ class Solution {
 
     }
 }
+
+// A more structure Solution
+class Solution {
+  public ListNode reverseKGroup(ListNode head, int k) {
+        if (head == null) {
+            return head;
+        }
+        ListNode tempHead = head, trailer = null;
+        int count = 0;
+        while (head != null && count < k) {
+            trailer = head;
+            head = head.next;
+            count++;
+        }
+        if (head == null && count < k) {
+            return tempHead;
+        }
+        trailer.next = null;
+        ListNode result = reverseList(tempHead);
+        tempHead.next = reverseKGroup(head, k);
+
+        return result;
+    }
+
+
+    public ListNode reverseList(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode second = head.next;
+        head.next = null;
+        ListNode rest = reverseList(second);
+        second.next = head;
+        return rest;
+    }
+}
