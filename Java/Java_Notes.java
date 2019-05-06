@@ -23,6 +23,10 @@ result.add(new ArrayList<>(cur_list));
 result.add(Arrays.asList(1, 2, 3));
 result.addAll(cur_list);
 
+// LinkedList
+LinkedList<String> stack = new LinkedList<>();
+stack.push("I");   // push new element to the front
+
 
 // Set
 Set<Integer> result = new HashSet<>();
