@@ -14,6 +14,9 @@ s1.compareTo(s2) --> s1 - s2
   sb.append('#');
   sb.append(count[i]);
   String key = sb.toString();
+// Character VS Integer
+Character.isDigit(val);
+int val = Integer.parseInt(str);
 
 
 // Why this need to set to ArrayList
