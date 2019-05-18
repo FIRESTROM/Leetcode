@@ -25,3 +25,24 @@ class Solution {
         return String.valueOf(s_arr);
     }
 }
+
+// Faster with StringBuilder
+class Solution {
+    public String reverseWords(String s) {
+        if (s == null || s.trim().isEmpty()) {
+            return s;
+        }
+
+        String[] strings = s.split(" ");
+        for (int i = 0; i < strings.length; i++) {
+            strings[i] = new StringBuilder(strings[i]).reverse().toString();
+        }
+
+        StringBuilder resultBuilder = new StringBuilder();
+        for (String str : strings) {
+            resultBuilder.append(str).append(" ");
+        }
+
+        return resultBuilder.toString().trim();
+    }
+}
