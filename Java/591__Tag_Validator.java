@@ -13,6 +13,7 @@ class Solution {
             if (stack.isEmpty() && contains_tag)
                 return false;
             if (code.charAt(i) == '<') {
+                // start of CDATA
                 if (!stack.isEmpty() && code.charAt(i + 1) == '!') {
                     closeindex = code.indexOf("]]>", i + 1);
                     if (closeindex < 0 || !isValidCdata(code.substring(i + 2, closeindex)))
