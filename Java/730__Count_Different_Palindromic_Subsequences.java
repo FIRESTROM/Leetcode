@@ -36,7 +36,7 @@ class Solution {
                 }
                 // else preserve the max count so far.
                 else
-                    dp[start][end] = dp[start][end - 1] + dp[start+1][end] - dp[start + 1][end - 1];
+                    dp[start][end] = dp[start][end - 1] + dp[start + 1][end] - dp[start + 1][end - 1];
 
                 // this is the modulus logic to prevent overflow.
                 dp[start][end] = (int) ((dp[start][end] + MOD) % MOD);
