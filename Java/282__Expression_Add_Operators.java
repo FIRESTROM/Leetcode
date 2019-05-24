@@ -19,12 +19,9 @@ class Solution {
             long cur_val = Long.parseLong(num.substring(start_idx, i + 1));
             if (start_idx == 0) {
                 helper(result, cur_str + cur_val, num, target, i + 1, cur_val, cur_val);
-            }
-            else{
+            } else {
                 helper(result, cur_str + "+" + cur_val, num, target, i + 1, eval + cur_val , cur_val);
-
                 helper(result, cur_str + "-" + cur_val, num, target, i + 1, eval - cur_val, -cur_val);
-
                 helper(result, cur_str + "*" + cur_val, num, target, i + 1, eval - multed + multed * cur_val, multed * cur_val );
             }
         }
