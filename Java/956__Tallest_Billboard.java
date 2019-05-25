@@ -1,3 +1,8 @@
+/*
+  dp[i][j] represents whether the sum of first i numbers can be j - 5000. dp[0][5000] = true.
+  Then dp[i + 1][j] = dp[i][j - rods[i]] | dp[i][j + rods[i]] | dp[i][j].
+  max[i][j] represents the largest sum of all positive numbers when the sum of first i numbers is j - 5000.
+*/
 class Solution {
     public int tallestBillboard(int[] rods) {
         int len = rods.length;
