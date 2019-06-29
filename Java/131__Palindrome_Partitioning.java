@@ -2,6 +2,7 @@ class Solution {
 
     boolean[][] dp;
     List<List<String>> result = new ArrayList<>();
+    
     public List<List<String>> partition(String s) {
         if (s == null || s.isEmpty()) {
             return result;
