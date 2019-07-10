@@ -1,5 +1,6 @@
 class Solution {
     Integer [][] dp = null;
+
     public int maxCoins(int[] nums) {
         int len = nums.length;
         dp = new Integer[len][len];
@@ -23,6 +24,3 @@ class Solution {
 		return dp[i][j];
 	}
 }
-
-
-	
