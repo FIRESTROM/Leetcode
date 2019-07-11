@@ -21,7 +21,7 @@ class Solution {
             if (!actual[c - 'a']) {
                 result.append(c);
                 actual[c - 'a'] = true;
-            }else
+            } else
                 count[c - 'a']--;
         }
         return result.toString();
