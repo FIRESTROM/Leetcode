@@ -1,7 +1,7 @@
 class Solution {
     public double[] calcEquation(List<List<String>> equations, double[] values, List<List<String>> queries) {
         Map<String, List<String>> graph = new HashMap<>();
-        Map<String,Double> weight = new HashMap<>();
+        Map<String, Double> weight = new HashMap<>();
         int x = 0;
         for (List<String> equation : equations) {
             graph.putIfAbsent(equation.get(0), new ArrayList<>());
