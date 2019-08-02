@@ -28,6 +28,6 @@ class Solution {
             remainder %= divisor;
         }
         return result.toString();
-        }
+      }
 
 }
