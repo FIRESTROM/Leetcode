@@ -28,3 +28,39 @@ class Solution {
         return result;
     }
 }
+
+// Quick Sort
+class Solution {
+    public int[] sortArray(int[] nums) {
+        sort(nums, 0, nums.length - 1);
+        return nums;
+    }
+
+    private void sort(int[] nums, int start, int end) {
+        if (a < b) {
+            int index = pivot(nums, start, end);
+            sort(nums, start, pivot - 1);
+            sort(nums, pivot + 1, end);
+        }
+    }
+
+    private int pivot(int[] nums, int start, int end) {
+        int pivot = nums[end];
+        int i = start, j = end - 1;
+        while (i <= j) {
+            if(nums[i] > pivot) {
+                swap(nums, i, j--);
+            } else {
+                i++;
+            }
+        }
+        swap(nums, i, end);
+        return i;
+    }
+
+    private void swap(int[] nums, int a, int b) {
+        int tmp = nums[a];
+        nums[a] = nums[b];
+        nums[b] = tmp;
+    }
+}
